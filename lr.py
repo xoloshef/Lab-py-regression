@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
 # Загружаем данные
-bank_data = pd.read_csv('data/bank.csv', sep = ';')
+bank_data = pd.read_csv('bank.csv', sep = ';')
 
 # Отделяем значения признаков от результата (традиционно y - результат)
 bank_features = bank_data.drop('y', axis = 1)
@@ -43,16 +43,3 @@ predictions = bank_model.predict(X_test)
 # Сверяем прогнозы с данными и выводим отчет
 # from sklearn.metrics import classification_report
 print(classification_report(y_test, predictions))
-
-"""
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-"""
