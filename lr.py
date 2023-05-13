@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report
 # Загружаем данные
 bank_data = pd.read_csv('bank.csv', sep = ';')
 
-# Отделяем значения признаков от результата (традиционно y - результат)
+# Отделяем значения признаков от результата (y - результат)
 bank_features = bank_data.drop('y', axis = 1)
 bank_output = bank_data.y
 
